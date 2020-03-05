@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monkey Shuffle P1</title>
+    <link href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet">
+    <style>
+        html{
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+        body{
+            font-family: 'Copse', serif;
+            text-align: center;
+        }
+    img {
+        height: 300px;
+        width: 300px;
+        border: 0px;
+    }
+        #plaatjes{
+            width: 900px;
+            height: 900px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>MonkeyShuffle</h1>
+<div id="plaatjes">
+    <img src="img/MS001.jpeg">
+    <img src="img/MS002.jpeg">
+    <img src="img/MS003.jpeg">
+    <img src="img/MS004.jpeg">
+    <img src="img/MS005.jpeg">
+    <img src="img/MS006.jpeg">
+    <img src="img/MS007.jpeg">
+    <img src="img/MS008.jpeg">
+    <img src="img/MS009.jpeg">
+</div>
+<script>
+    var plaatjes = document.getElementsByTagName("img");
+    var randomNumbers = [];
+    var random = 0;
+
+    while(randomNumbers.length < 9) {
+        random = Math.floor(Math.random() * 9) + 1;
+        if(randomNumbers.lastIndexOf(random) == -1){
+            randomNumbers.push(random);
+            console.log(randomNumbers);
+        }
+    }
+
+    random = 0;
+for(var plaatje in plaatjes){
+    plaatjes[plaatje].src = "img/MS00" + randomNumbers[random] + ".jpeg";
+    random++;
+}
+
+
+
+
+</script>
+</body>
+</html>
