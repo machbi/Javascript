@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrookApp</title>
+
+    <style>
+        #ogen {
+            height: 88px;
+            width:  242px;
+            border: 3px solid black;
+            transition: 3s;
+        }
+        #neus {
+            height: 88px;
+            width:  242px;
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+            transition: 3s;
+        }
+        #mond {
+            height: 88px;
+            width:  242px;
+            border: 3px solid black;
+            transition: 3s;
+        }
+    </style>
+</head>
+<body>
+<div id="ogen">Ogen</div>
+<div id="neus"></div>
+<div id="mond">Mond</div>
+
+<script>
+
+    // Begin van neus
+    var tellerNeus = 0;
+    var plaatjesNeus = [1,2,3];
+    var neus = document.getElementById("neus");
+    neus.style.backgroundImage = "url('img/CANEUS01.png')";
+
+    neus.addEventListener("click", function () {
+        neus.style.backgroundImage = "url('img/CANEUS0" + getNeus() + ".png')";
+    });
+
+    function getNeus() {
+        if (tellerNeus >= plaatjesNeus.length){
+            tellerNeus = 1;
+        } else {
+            tellerNeus++;
+        }
+    console.log(tellerNeus);
+        return tellerNeus;
+    }
+    // ----------- einde neus --------------
+    // ----------- start ogen --------------
+    var tellerOgen = 0;
+    var plaatjesOgen = [1,2,3];
+    var ogen = document.getElementById("ogen");
+    ogen.style.backgroundImage = "url('img/CAOGEN01.png')";
+
+    ogen.addEventListener("click", function () {
+         ogen.style.backgroundImage = "url('img/CAOGEN0" + getOgen() + ".png')";
+    });
+
+    function getOgen() {
+        if (tellerOgen >= plaatjesOgen.length){
+            tellerOgen = 1;
+        } else {
+            tellerOgen++;
+        }
+        console.log(tellerOgen);
+        return tellerOgen;
+    }
+    // ----------- einde ogen --------------
+    // ----------- start mond --------------
+
+    var tellerMond = 0;
+    var plaatjesMond = [1,2,3];
+    var mond = document.getElementById("mond");
+    mond.style.backgroundImage = "url('img/CAMOND01.png')";
+
+    mond.addEventListener("click", function () {
+        mond.style.backgroundImage = "url('img/CAMOND0" + getMond() + ".png')";
+    });
+
+    function getMond() {
+        if (tellerMond >= plaatjesMond.length){
+            tellerMond = 1;
+        } else {
+            tellerMond++;
+        }
+        console.log(tellerMond);
+        return tellerMond;
+    }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

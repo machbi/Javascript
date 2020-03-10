@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autotoeter</title>
+</head>
+<body>
+
+<script>
+    var mijnauto = {
+        kleur: "blauw",
+        merk: "Ford",
+        snelheid: 0,
+
+        gasgeven: function () {
+            this.snelheid += 5
+            console.log(this.snelheid);
+        },
+
+       toeteren: function () {
+            console.log("toet!")
+       }
+    }
+    // Eigen while-loop om te kijken, geen onderdeel van de opdracht.
+    mijnauto.gasgeven();
+    while (mijnauto.snelheid < 25){
+        mijnauto.gasgeven()
+            if (mijnauto.snelheid >= 10) {
+            mijnauto.toeteren()
+            }
+    }
+
+
+</script>
+
+</body>
+</html>
